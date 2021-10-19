@@ -1,0 +1,11 @@
+.box {
+  background-color: rgb(196, 228, 228);
+  border-radius: 20px;
+  text-align: center;
+}
+.images {
+  width: 350px;
+  height: 350px;
+  padding: 10px;
+  border-radius: 20px;
+}

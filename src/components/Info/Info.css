@@ -1,0 +1,8 @@
+.doctor-box {
+  text-align: center;
+  background-color: cadetblue;
+  border: 1px solid rgb(177, 177, 233);
+  border-radius: 20px;
+  width: 500px;
+  padding: 10px;
+}

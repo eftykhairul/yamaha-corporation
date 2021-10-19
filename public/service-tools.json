@@ -1,0 +1,93 @@
+[
+    {
+    "id": "1",
+    "name": "Ultrasonography",
+    "doctor": "John Karim",
+    "email": "john@gmail.com",
+    "doctorPhone": "0171155660",
+    "price": 5000,
+    "description": "A procedure that uses high-energy sound waves to look at tissues and organs inside the body. The sound waves make echoes that form pictures of the tissues and organs on a computer screen (sonogram). Ultrasonography may be used to help diagnose diseases, such as cancer. It may also be used during pregnancy to check the fetus (unborn baby) and during medical procedures, such as biopsies. Also called ultrasound.",
+    "images": "https://image.shutterstock.com/image-photo/woman-endocrinologist-making-ultrasonography-female-260nw-1838027524.jpg"
+    },
+    {
+    "id": "2",
+    "name": "Dental Care",
+    "email": "snow@gmail.com",
+    "price": 3000,
+    "doctorPhone": "0171155660",
+    "description": "Good oral/dental health translates to good health overall. Dental problems such as cavities or gum disease can impair your ability to eat and speak properly, cause pain and bad breath. And what many people may not realize, is that poor dental health can have a profoundly, negative affect on areas outside of the mouth, including your heart, diabetes, pregnancy and chronic inflammation, such as arthritis — to name a few.",
+    "doctor": "Abdulla Alim",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC521ZhdSltScd85l_81Hi4PprDqJU7xvkjA&usqp=CAU"
+    },
+    {
+    "id": "3",
+    "name": "Therapy",
+    "doctor": "Akter Alia",
+    "email": "akter@gmail.com",
+    "doctorPhone": "0171155660",
+    "price": 14000,
+    "description": "While therapy can help people work through issues that lead to thoughts of suicide, it’s usually not the best option for people in crisis. If you are in crisis, you can get help right away by reaching out to a suicide helpline through phone, text message, or online chat. You may be encouraged to call or visit the nearest emergency room. A therapist can help support you going forward, once you are no longer in crisis.When any type of mental health or emotional concern affects daily life and function, therapy may be recommended. Therapy can help you learn about what you’re feeling, why you might be feeling it, and how to cope.",
+    "images": "https://media.istockphoto.com/photos/psychological-counselling-black-male-patient-with-depression-having-picture-id1329038035?b=1&k=20&m=1329038035&s=170667a&w=0&h=sGS9KOw_6RCe9sVsjQMxjHvwo2mRovuWsqgUvbjBvyM="
+    },
+    {
+    "id": "4",
+    "name": "Teeth Filling",
+    "doctor": "Amin Ullah",
+    "email": "neelufa@gmail.com",
+    "doctorPhone": "0171155660",
+    "price": 12000,
+    "description": "With teeth filing and contouring you can improve the appearance of your teeth without spending a fortune.Teeth reshaping involves removing a small amount of tooth enamel to fix minor aesthetic issues. It's a quick, pain-free and cheap alternative to veneers which doesn't cause lasting damage to teeth.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR13ea6Jo2EDUU445N0GgRWGmkQaL56EsyfxA&usqp=CAU"
+    },
+    {
+    "id": "5",
+    "name": "Radio Therapy",
+    "doctor": "Mosharaf Hossain",
+    "doctorPhone": "0171155660",
+    "email": "shamim@gmail.com",
+    "price": 16000,
+    "description": "Radiation therapy is used to treat cancer and ease cancer symptoms.When used to treat cancer, radiation therapy can cure cancer, prevent it from returning, or stop or slow its growth.When treatments are used to ease symptoms, they are known as palliative treatments. External beam radiation may shrink tumors to treat pain and other problems caused by the tumor, such as trouble breathing or loss of bowel and bladder control. Pain from cancer that has spread to the bone can be treated with systemic radiation therapy drugs called radiopharmaceuticals.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTptqO35D8AFven-__EViiKgXq_P-VFhz5_WA&usqp=CAU"
+    },
+    {
+    "id": "6",
+    "name": "Full Body Checkup",
+    "doctor": "Rohmot Ullah",
+    "email": "rahman@gmail.com",
+    "doctorPhone": "0171155660",
+    "price": 22000,
+    "description": "Regular check-ups help in identifying possible health conditions at an early stage, and the adage that “Prevention is better than cure” has never been truer. Early detection gives one the best chance of fighting the disease off without any complication. In conditions such as cancer, early diagnosis can be the difference between a complete cure and a life-long battle.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8WPWNExyuopqIQpzcHrYZjxDetGMhSvNsMA&usqp=CAU"
+    },
+    {
+    "id": "7",
+    "name": "X-Ray",
+    "doctor": "Farazi Rahman",
+    "email": "anna@gmail.com",
+    "doctorPhone": "0171155660",
+    "price": 600,
+    "description": " X-rays can be used to examine most areas of the body. They're mainly used to look at the bones and joints, although they're sometimes used to detect problems affecting soft tissue, such as internal organs.Problems that may be detected during an X-ray include, bone fractures and breaks",
+    "images": "https://st.depositphotos.com/1003098/1836/i/600/depositphotos_18368563-stock-photo-radiologists-with-patient-in-x.jpg"
+    },
+    {
+    "id": "8",
+    "name": "Operation",
+    "doctor": "Abdul Rahman",
+    "email": "joshim@gmail.com",
+    "doctorPhone": "0171155660",
+    "price": 5200,
+    "description": "The purpose of surgery varies, but it may be recommended for making or confirming a diagnosis, removing damaged tissue or an obstruction, repairing or repositioning tissues or organs, implanting devices, redirecting blood vessels, or transplanting tissues or organs. Some people opt for surgery for cosmetic reasons.",
+    "images": "https://st.depositphotos.com/1518767/1415/i/600/depositphotos_14156552-stock-photo-side-view-of-a-surgical.jpg"
+    },
+    {
+    "id": "9",
+    "name": "Half Body Checkup",
+    "doctor": "Rina Akter",
+    "email": "arhana@gmail.com",
+    "doctorPhone": "0171155660",
+    "price": 12000,
+    "description": "As mentioned earlier, going for Full Body Checkups and other types of preventive checkups regularly helps prevent, and avoid diseases as well as treat other diseases at an early stage. This in turn reduces the chance of you getting sick (or more sick ) which further reduces your medical costs.Let’s also not forget the time factor – getting sick can result in needing to take time off from work or school and can disrupt your entire lifestyle.A medical checkup every now and then ensures that you are healthy and decreases the chances of having to take a sick day, or even get admitted to the hospital.",
+    "images": "https://issbcoaching.com/wp-content/uploads/2018/05/DSC09483-300x246.jpg"
+    }
+    
+]

@@ -4,7 +4,7 @@
 
 # => Mostly known as their service and behaviour
 
-# => situate in Republic of Korea
+# => situated in Republic of Korea
 
 # => They have well known Doctors from all over the world
 

@@ -43,15 +43,15 @@ function App() {
           <PrivateRoute path='/booking/:serviceId'>
             <Booking></Booking>
           </PrivateRoute>
-          <Route path='/dashbord'>
+          <PrivateRoute path='/dashbord'>
             <Dashbord></Dashbord>
-          </Route>
-          <Route path='/addService'>
+          </PrivateRoute>
+          <PrivateRoute path='/addService'>
             <AddService></AddService>
-          </Route>
-          <Route path='/myOrder'>
+          </PrivateRoute>
+          <PrivateRoute path='/myOrder'>
             <MyOrder></MyOrder>
-          </Route>
+          </PrivateRoute>
           <Route path='/speciallist'>
             <Speciallist></Speciallist>
           </Route>

@@ -6,13 +6,13 @@ import Nurse from '../Nurse/Nurse';
 const Nurses = () => {
     const[nurses,setNurses]= useState([])
     useEffect( ()=>{
-        fetch('/nurses-info.json')
+        fetch('http://localhost:5000/management')
         .then(res=>res.json())
         .then(data=>setNurses(data))
     },[])
     return (
         <div id='nurses' className='container'>
-            <h1 className='text-danger my-5 middle'>Our Trained Nurses</h1>
+            <h1 className='text-danger my-5 middle'>Our Management</h1>
             <div className='row'>
                 {
                     nurses.map(nurse=> <Nurse

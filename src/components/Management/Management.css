@@ -1,0 +1,13 @@
+.add-management form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+}
+.add-managementt form input,
+textarea {
+  margin-bottom: 10px;
+}
+.add-management {
+  text-align: center;
+}

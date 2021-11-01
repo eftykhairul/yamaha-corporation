@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
     const {signInUsingGoogle} = useAuth();
@@ -8,7 +9,10 @@ const Login = () => {
     const[email,setEmail] = useState('');
     const[password,setPassword] = useState('');
     const [error,setError] =useState('');
-    const [isLogin,setIslogin] = useState(false)
+    const [isLogin,setIslogin] = useState(false);
+    const history = useHistory();
+    const location = useLocation();
+    const url = location.state?.from||"/home"
 
     
 
@@ -26,11 +30,26 @@ const Login = () => {
         }
         
     }
-    const processLogin =(email,password)=>{
-        signInWithEmailAndPassword(auth, email, password)
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+        .then((result) => 
+        {
+            setIslogin(true)
+            const user = result.user
+            history.push(url)
+        }
+            )
+        .catch((err) => console.log(err))
+        .finally(() => {
+        setIslogin(false)
+        })
+};
+    const processLogin =(name,email,password)=>{
+        signInWithEmailAndPassword(auth,name, email, password)
         .then(result =>{
             const user =result.user;
             console.log(user);
+            history.push(url);
         })
         .catch(error=>{
             setError(error.message)
@@ -46,8 +65,8 @@ const Login = () => {
     const handlePasswordChange = e =>{
         setPassword(e.target.value)
     }
-    const createNewUser =(email,password) =>{
-        createUserWithEmailAndPassword(auth,email,password)
+    const createNewUser =(name,email,password) =>{
+        createUserWithEmailAndPassword(auth,name,email,password)
             .then(result =>{
                 const user = result.user;
                 console.log(user);

@@ -4,33 +4,33 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div id='footer'>
-            <h1 className='my-5 middle'>Contact Yeon</h1>
+            <h1 className='my-5 middle'>Contact GoDaddy</h1>
             <div className='my-footer my-3'>
                 
                 <div className='section'>
                     <div>
-                        <h2>Yeon's Medical Hospital</h2>
+                        <h2>GoDaddy Tourism</h2>
                         <p>Questions</p>
                         <p>Jobs</p>
                         <p>Help</p>
                         <p>Mobile</p>
                     </div>
                     <div>
-                        <h2>Doctors</h2>
+                        <h2>About</h2>
                         <p>Serial</p>
                         <p>New Appointed</p>
                         <p>Specialist</p>
-                        <p>Nurses</p>
+                        <p>More</p>
                     </div>
                     <div>
-                        <h2>Yeon's Hospital Ltd</h2>
+                        <h2>GoDaddy Ltd</h2>
                         <p>About</p>
                         <p>Work</p>
                         <p>Privacy Policy</p>
                         <p>Terms of Service</p>
                     </div>
                 </div>
-                <h2 className="my-footer mt-2">Copyright © 2021 Yeon-medical-hospital.com</h2>
+                <h2 className="my-footer mt-2">Copyright © 2021 GoDaddy Tourism</h2>
             </div>
         </div>
     );

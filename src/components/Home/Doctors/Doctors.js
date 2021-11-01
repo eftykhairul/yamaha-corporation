@@ -6,13 +6,13 @@ import Doctor from '../Doctor/Doctor';
 const Doctors = () => {
     const [infos,setInfos]=useState([])
     useEffect(()=>{
-        fetch('/doctor-info.json')
+        fetch('http://localhost:5000/speciallist')
         .then(res=>res.json())
         .then(data=>setInfos(data))
     },[])
     return (
         <div id='doctors' className='container'>
-            <h1 className='text-info my-5 middle'>Our Expert Doctors</h1>
+            <h1 className='text-info my-5 middle'>Our Experts</h1>
             <div className='row'>
                 {
                     infos.map(doctor=><Doctor

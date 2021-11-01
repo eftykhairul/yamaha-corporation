@@ -1,9 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './banner.css'
-import first from '../../../images/banner/martha-dominguez-de-gouveia-k-NnVZ-z26w-unsplash.jpg';
-import second from '../../../images/banner/martha-dominguez-de-gouveia-nMyM7fxpokE-unsplash.jpg';
-import third from '../../../images/banner/national-cancer-institute-DK--4VWK1tw-unsplash.jpg';
+
 
 
 const Banner = () => {
@@ -13,36 +11,36 @@ const Banner = () => {
     <Carousel.Item>
     <img
         className="d-block w-100 img"
-        src={first}
+        src={'https://www.albawaba.com/sites/default/files/im_new/dima/Tourism_shutterstock_June9.jpg?width=1200&enable=upscale'}
         alt="First slide"
     />
     <Carousel.Caption>
-        <h3 className='text-dark'>Bed of Our Hospital</h3>
-        <p className='text-dark'>Well Decorated Bed feels like Home Environment</p>
+        <h3 className='text-dark'>Travelling is fun</h3>
+        <p className='text-dark'>Travelling more and you will get peace</p>
     </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
     <img
         className="d-block w-100 img"
-        src={second}
+        src={'https://leverageedu.com/blog/wp-content/uploads/2019/10/Career-in-Travel-and-Tourism.jpg'}
         alt="Second slide"
     />
 
     <Carousel.Caption>
-        <h3 className='text-dark'>View of Our Hospital</h3>
-        <p className='text-dark'>A Korean based Internation Hospital in your door.</p>
+        <h3 className='text-dark'>We support many foreign services</h3>
+        <p className='text-dark'>Just knock us for your travel and we will help us</p>
     </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
     <img
         className="d-block w-100 img"
-        src={third}
+        src={'https://www.sandipuniversity.edu.in/blog/wp-content/uploads/2020/02/bba-travel-tourism-management-700x400.jpg'}
         alt="Third slide"
     />
 
     <Carousel.Caption>
-        <h3 className='text-dark'>Dr. Mahadi Karim taking with a patient</h3>
-        <p className='text-dark'>Dr. karim is well known for heart attack specialist and a patient friendly doctor whos has a vast knowledge in heart dieseas</p>
+        <h3 className='text-dark'>Wait! We will help you in your travel</h3>
+        <p className='text-dark'>Just know more about our service, Take a visit at our website</p>
     </Carousel.Caption>
     </Carousel.Item>
 </Carousel>

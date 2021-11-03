@@ -7,7 +7,7 @@ const Info = () => {
     const [data,setData] = useState([]);
     const [singleInfo,setSingleInfo]=useState({})
     useEffect(()=>{
-        fetch('http://localhost:5000/speciallist')
+        fetch('https://whispering-hollows-15183.herokuapp.com/speciallist')
         .then(res => res.json())
         .then(data => setData(data))
     },[])

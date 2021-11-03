@@ -21,12 +21,12 @@ const Header = () => {
                         <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#doctors">Expert</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#nurses">Management</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        {user?.email && <NavDropdown title="Dashboard" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/addService">Add A Service</NavDropdown.Item>
                             <NavDropdown.Item href="/myOrder">My Orders</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Manage My Order</NavDropdown.Item>
                             
-                        </NavDropdown>
+                        </NavDropdown>}
                         
                         {user?.email?
                             <Button onClick={logOut} variant='primary'>Log Out</Button>:

@@ -7,7 +7,7 @@ const NurseInfo = () => {
     const [singleInfo,setSingleInfo]=useState({})
 
     useEffect(()=>{
-        fetch('http://localhost:5000/management')
+        fetch('https://whispering-hollows-15183.herokuapp.com/management')
         .then(res => res.json())
         .then(data => setData(data))
     },[])

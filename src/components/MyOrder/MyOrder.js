@@ -1,34 +1,29 @@
-import React from 'react';
-import { useForm } from "react-hook-form";
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 
 
 const MyOrder = () => {
-    const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data =>{
-        console.log(data)
-        axios.post('http://localhost:5000/services', data)
-        .then(res=>{
-            if (res.data.insertedId){
-                alert('Added Successfully')
-                reset();
-            }
-        })
-    };
+    const{serviceId} = useParams();
+    const [dataServices,setdataServices] = useState([]);
+    const [singleServices,setSingleServices]=useState({});
+    
+    useEffect(()=>{
+        fetch('https://whispering-hollows-15183.herokuapp.com/services')
+        .then(res => res.json())
+        .then(data => setdataServices(data))
+    },[])
+    useEffect( () => {
+        const foundData=  dataServices.find(singleService => singleService._id === serviceId)
+        setSingleServices(foundData)
+    },[dataServices])
     
     return (
         <div className='add-service' id='addService'>
-            <h2>Your Order</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true, maxLength: 20 })} placeholder='Your Name' />
-                <textarea {...register("email")}  placeholder='Email' />
-                {/* <input type="number" {...register("price")} placeholder='Price' /> */}
-                
-                <input {...register("address")} placeholder='Address' />
-                <input {...register("city")} placeholder='City' />
-                
-                <input type="submit" />
-            </form>
+            <h1>Hello</h1>
+            <img className='images' src={singleServices?.images} alt=''/>
+            <h1>Name: {singleServices?.name}</h1>
+            <p>Description of {singleServices?.name}: {singleServices?.description}</p>
+            <h5>Price: {singleServices?.price}</h5>
         </div>
     );
 };

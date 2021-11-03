@@ -7,7 +7,7 @@ const Speciallist = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data =>{
         console.log(data)
-        axios.post('http://localhost:5000/speciallist', data)
+        axios.post('https://whispering-hollows-15183.herokuapp.com/speciallist', data)
         .then(res=>{
             if (res.data.insertedId){
                 alert('Added Successfully')

@@ -6,7 +6,7 @@ import Nurse from '../Nurse/Nurse';
 const Nurses = () => {
     const[nurses,setNurses]= useState([])
     useEffect( ()=>{
-        fetch('http://localhost:5000/management')
+        fetch('https://whispering-hollows-15183.herokuapp.com/management')
         .then(res=>res.json())
         .then(data=>setNurses(data))
     },[])

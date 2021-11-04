@@ -31,7 +31,7 @@ const Login = () => {
         
     }
     const handleGoogleLogin = () => {
-        signInUsingGoogle()
+        signInUsingGoogle(auth)
         .then((result) => 
         {
             setIslogin(true)

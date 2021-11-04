@@ -18,6 +18,8 @@ const useFirebase = () =>{
         signInWithPopup(auth,googleProvider)
             .then(result => {
                 setUser(result.user);
+                sessionStorage.setItem('email',result.user.email);
+                sessionStorage.setItem('name', result.user.name);
         })
         .finally(()=> setIsLoading(false));
 

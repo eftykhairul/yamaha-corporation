@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import ShowOrder from './ShowOrder';
 
 
 const MyOrder = () => {
-    const{serviceId} = useParams();
-    const [dataServices,setdataServices] = useState([]);
-    const [singleServices,setSingleServices]=useState({});
+    const[services,setServices]= useState([]);
     
-    useEffect(()=>{
-        fetch('https://whispering-hollows-15183.herokuapp.com/services')
-        .then(res => res.json())
-        .then(data => setdataServices(data))
+    useEffect( ()=>{
+        fetch('https://whispering-hollows-15183.herokuapp.com/orders')
+            .then(res=>res.json())
+            .then(data=>setServices(data))
     },[])
-    useEffect( () => {
-        const foundData=  dataServices.find(singleService => singleService._id === serviceId)
-        setSingleServices(foundData)
-    },[dataServices])
     
     return (
         <div className='add-service' id='addService'>
-            <h1>Hello</h1>
-            <img className='images' src={singleServices?.images} alt=''/>
-            <h1>Name: {singleServices?.name}</h1>
-            <p>Description of {singleServices?.name}: {singleServices?.description}</p>
-            <h5>Price: {singleServices?.price}</h5>
+            <h1>Your Order</h1>
+            <div className='service-container mt-3'>
+            {
+                services.map(service=> <ShowOrder
+                    key={service._id}
+                    service={service}
+                ></ShowOrder>
+                )
+            }
+            </div>
+            
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShowOrder = ({service}) => {
+const ShowAllProduct = ({service}) => {
     const {name,price,images,description} = service;
     const handleDelete =id =>{
         const url =`https://whispering-hollows-15183.herokuapp.com/orders/${id}`;
@@ -19,7 +19,8 @@ const ShowOrder = ({service}) => {
         })
     }
     return (
-        <div className='service pb-3'>
+        <div>
+            <div className='service pb-3'>
             <img className='images' src={images} alt='' />
             <h2>Name: {name}</h2>
             <h3>Price: {price}</h3>
@@ -29,7 +30,8 @@ const ShowOrder = ({service}) => {
             <button onClick={()=> handleDelete(service._id)} className='btn btn-warning'>Delete {name} </button>
             
         </div>
+        </div>
     );
 };
 
-export default ShowOrder;
+export default ShowAllProduct;

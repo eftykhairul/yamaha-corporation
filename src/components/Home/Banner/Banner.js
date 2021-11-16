@@ -11,7 +11,7 @@ const Banner = () => {
     <Carousel.Item>
     <img
         className="d-block w-100 img"
-        src={'https://www.albawaba.com/sites/default/files/im_new/dima/Tourism_shutterstock_June9.jpg?width=1200&enable=upscale'}
+        src={'https://cdnb.artstation.com/p/assets/images/images/016/734/107/large/giridhar-naani-e29f8166329333-5b1266971fcf8.jpg?1553256310'}
         alt="First slide"
     />
     <Carousel.Caption>
@@ -22,7 +22,7 @@ const Banner = () => {
     <Carousel.Item>
     <img
         className="d-block w-100 img"
-        src={'https://leverageedu.com/blog/wp-content/uploads/2019/10/Career-in-Travel-and-Tourism.jpg'}
+        src={'http://4.bp.blogspot.com/-vINkA36c4Vw/VQVANbRztpI/AAAAAAAAKbo/TcWLnb_3KmI/s1600/yamaha%2Btwo%2Bwhellers%2Bprice%2Bin%2Bnepal.jpg'}
         alt="Second slide"
     />
 
@@ -34,7 +34,7 @@ const Banner = () => {
     <Carousel.Item>
     <img
         className="d-block w-100 img"
-        src={'https://www.sandipuniversity.edu.in/blog/wp-content/uploads/2020/02/bba-travel-tourism-management-700x400.jpg'}
+        src={'https://www.india.com/wp-content/uploads/2017/01/Yamaha-Upcoming-Launches-FZ-1-750x380.jpg'}
         alt="Third slide"
     />
 

@@ -3,13 +3,8 @@
   border-radius: 20px;
   text-align: center;
 }
+
 .contain {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-.images {
-  width: 350px;
-  height: 350px;
-  padding: 10px;
-  border-radius: 20px;
+  /* grid-template-columns: 2fr 1fr; */
 }

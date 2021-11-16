@@ -6,15 +6,15 @@ const Services = () => {
     const[services,setServices]= useState([]);
     
     useEffect( ()=>{
-        fetch('https://whispering-hollows-15183.herokuapp.com/services')
+        fetch('https://whispering-hollows-15183.herokuapp.com/moreServices')
         .then(res=>res.json())
-        .then(data=>setServices(data))
+        .then(data=>setServices(data.slice(0,6)))
     },[])
     
     
     return (
         <div id='services'>
-            <h1 className='text-info my-5 middle'>Our Services</h1>
+            <h1 className='text-info my-5 middle'>Our Products</h1>
             <div className='service-container mt-3'>
             {
                 services.map(service=> <Service

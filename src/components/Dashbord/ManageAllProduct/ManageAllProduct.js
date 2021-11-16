@@ -1,13 +1,11 @@
-
 import React, { useEffect, useState } from 'react';
-import ShowOrder from './ShowOrder';
+import ShowAllProduct from './ShowAllProduct';
 
-
-const MyOrder = () => {
+const ManageAllProduct = () => {
     const[services,setServices]= useState([]);
     
     useEffect( ()=>{
-        fetch('https://whispering-hollows-15183.herokuapp.com/orders')
+        fetch('https://whispering-hollows-15183.herokuapp.com/moreServices')
             .then(res=>res.json())
             .then(data=>setServices(data))
     },[])
@@ -16,12 +14,13 @@ const MyOrder = () => {
             <h1>Your Order</h1>
             <div className='service-container mt-3'>
             {
-                services.map(service=> <ShowOrder
+                services.map(service=> <ShowAllProduct
                     key={service._id}
                     service={service}
+                ></ShowAllProduct>
                     
-                >
-                </ShowOrder>
+                    
+                
                 )
             }
             </div>
@@ -30,4 +29,4 @@ const MyOrder = () => {
     );
 };
 
-export default MyOrder;
+export default ManageAllProduct;

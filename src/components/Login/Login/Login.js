@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 
 const Login = () => {
     const {signInUsingGoogle} = useAuth();
@@ -12,6 +12,7 @@ const Login = () => {
     const [isLogin,setIslogin] = useState(false);
     const history = useHistory();
     const location = useLocation();
+    const [user, setUser] = useState({});
     const url = location.state?.from||"/home"
 
     
@@ -26,30 +27,17 @@ const Login = () => {
             createNewUser(email,password);
         }
         else{
-            processLogin(email,password);
+            processLogin(email,password,location,history);
         }
         
     }
-    const handleGoogleLogin = () => {
-        signInUsingGoogle(auth)
-        .then((result) => 
-        {
-            setIslogin(true)
-            const user = result.user
-            history.push(url)
-        }
-            )
-        .catch((err) => console.log(err))
-        .finally(() => {
-        setIslogin(false)
-        })
-};
-    const processLogin =(name,email,password)=>{
+
+    const processLogin =(name,email,password, location, history)=>{
         signInWithEmailAndPassword(auth,name, email, password)
         .then(result =>{
             const user =result.user;
-            console.log(user);
-            history.push(url);
+
+            // history.push(url);
         })
         .catch(error=>{
             setError(error.message)
@@ -57,22 +45,46 @@ const Login = () => {
     }
     const toggleRegister = e => {
         setIslogin(e.target.checked);
+        e.preventDefault();
     }
 
     const handleEmailChange = e =>{
         setEmail(e.target.value);
+        e.preventDefault();
     }
     const handlePasswordChange = e =>{
         setPassword(e.target.value)
+        e.preventDefault();
     }
-    const createNewUser =(name,email,password) =>{
-        createUserWithEmailAndPassword(auth,name,email,password)
+    const createNewUser =(email,password,name) =>{
+        createUserWithEmailAndPassword(auth,email,password,name)
             .then(result =>{
                 const user = result.user;
                 console.log(user);
+                const newUser={email,displayName:name};
+                setUser(newUser);
+                saveUser(email, name);
+                // console.log(email)
+                const destination = location.state?.from || '/';
+                history.push(destination);
                 setError('')
             })
     }
+
+    const saveUser = (email,name) => {
+        const user = {email,name}
+        // console.log(user)
+        fetch('https://whispering-hollows-15183.herokuapp.com/users',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then()
+
+    }
+
     return (
         <div className='mx-3'>
             <h1>Please {isLogin? 'Register': 'Log In'} </h1>

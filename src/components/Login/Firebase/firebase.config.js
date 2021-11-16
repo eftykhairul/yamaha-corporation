@@ -1,10 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyC2R4sMhCJe_t-en1oB7KZgLU1SRRf0BlY",
-    authDomain: "godaddy-c4cdc.firebaseapp.com",
-    projectId: "godaddy-c4cdc",
-    storageBucket: "godaddy-c4cdc.appspot.com",
-    messagingSenderId: "1056259758651",
-    appId: "1:1056259758651:web:7fc8c6a65c4d36fb5eda1e",
-    measurementId: "G-J9L0196J0T"
+    apiKey: "AIzaSyBfznn7NvPSe2DRN9aHEpZd55MotXNRYlA",
+    authDomain: "yamaha-corporation.firebaseapp.com",
+    projectId: "yamaha-corporation",
+    storageBucket: "yamaha-corporation.appspot.com",
+    messagingSenderId: "3528113448",
+    appId: "1:3528113448:web:c8e88e4dddeafc384a641d"
 };
 export default  firebaseConfig;

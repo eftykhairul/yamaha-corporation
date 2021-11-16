@@ -1,21 +1,21 @@
 
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import './App.css';
-import Dashbord from './components/Dashbord/Dashbord';
 import AddService from './components/AddService/AddService';
 import Booking from './components/Booking/Booking/Booking';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home/Home';
 import Info from './components/Info/Info';
-import NurseInfo from './components/Info/NurseInfo';
 import Login from './components/Login/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
-import Management from './components/Management/Management';
 import NotFound from './components/NotFound/NotFound';
 import Speciallist from './components/Speciallist/Speciallist';
 import AuthProvider from './context/AuthProvider';
 import MyOrder from './components/MyOrder/MyOrder';
+import Explores from './components/Home/Explores/Explores';
+import Dashbord from './components/Dashbord/Dashbord/Dashbord';
+import AddReview from './components/Dashbord/AddReview/AddReview';
 
 function App() {
   return (
@@ -37,9 +37,6 @@ function App() {
           <PrivateRoute path='/info/:Id'>
             <Info></Info>
           </PrivateRoute>
-          <PrivateRoute path='/nurseInfo/:Id'>
-            <NurseInfo></NurseInfo>
-          </PrivateRoute>
           <PrivateRoute path='/booking/:serviceId'>
             <Booking></Booking>
           </PrivateRoute>
@@ -49,14 +46,17 @@ function App() {
           <PrivateRoute path='/addService'>
             <AddService></AddService>
           </PrivateRoute>
+          <PrivateRoute path='/reviewData'>
+            <AddReview></AddReview>
+          </PrivateRoute>
           <PrivateRoute path='/myOrder'>
             <MyOrder></MyOrder>
           </PrivateRoute>
           <Route path='/speciallist'>
             <Speciallist></Speciallist>
           </Route>
-          <Route path ='/management'>
-            <Management></Management>
+          <Route path ='/moreServices'>
+            <Explores></Explores>
           </Route>
           <Route path='*'>
             <NotFound></NotFound>
@@ -64,7 +64,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
-      </AuthProvider>
+    </AuthProvider>
       
     </div>
   );
